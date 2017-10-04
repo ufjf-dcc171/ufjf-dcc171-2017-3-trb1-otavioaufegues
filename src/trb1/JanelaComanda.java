@@ -52,7 +52,7 @@ public class JanelaComanda extends JFrame {
         tabelaItens = new JTable(new ItemTableModel(comanda, cardapio));
         tabelaItens.setModel(new ItemTableModel(comanda, cardapio));
         tabelaItens.getSelectionModel().addListSelectionListener(new ItensComandaHandler());
-//        txtQuantidade.setText("1");
+        txtQuantidade.setText("1");
 
         JPanel formulario = new JPanel();
         JPanel tabela = new JPanel();

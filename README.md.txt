@@ -9,7 +9,27 @@
 
 3. Modelo de dados utilizado;
 
+	Classe Mesa 
+    	int numero;
+    	boolean aberto;
+    	String horaAbertura;
+    	String horaFechamento;
+    	ArrayList<Comanda>;
 
+	Classe Comanda
+    	int mesa;
+    	String codigo;
+    	boolean aberto;
+    	ArrayList<ItemComanda>;
+
+ 	Classe ItemComanda 
+    	private int codigoItem;
+    	private int quantidade;
+
+ 	Classe ItemCardapio
+    	private int codigo;
+    	private String nome;
+    	private double valorUnitario;
 
 4. Construção das telas;
 	O sistema todo têm três telas, que são "Janela","JanelaFechamento","JanelaComanda";
@@ -18,8 +38,8 @@
 	Nessa tela também existem cinco botões: 
 	- Abrir Mesa;
 	- Fechar Mesa;
-	- Abrir Comanda
-	- Fechar Comanda
+	- Abrir Comanda;
+	- Fechar Comanda;
 	- Fazer Pedido;
 	
 	Ao clicar em "Fazer Pedido", estando uma comanda selecionada, abre-se uma tela onde podem ser adicionados os itens à comanda.
@@ -40,3 +60,7 @@
 	- Adaptação as particularidades da linguagem na qual não estou habituado a programar;
 	- Entendimento do funcionamento de certos elementos utilizados como o ComboBox;
 	- Dificuldade grande em Montar um bom Layout.
+
+7. Pontos onde podem ser realizadas melhorias futuras.
+
+Melhorar 

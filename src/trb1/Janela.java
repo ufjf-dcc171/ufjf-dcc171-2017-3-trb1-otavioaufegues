@@ -5,7 +5,6 @@
  */
 package trb1;
 
-import java.awt.BorderLayout;
 import java.awt.GridLayout;
 import java.awt.HeadlessException;
 import java.awt.event.ActionEvent;
@@ -17,7 +16,6 @@ import javax.swing.DefaultListModel;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JList;
-import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.ListSelectionModel;
@@ -148,16 +146,24 @@ class Janela extends JFrame {
                     return;
                 }
                 Mesa selecionada = listaMesas.getSelectedValue();
-                selecionada.setAberto(false);
-                selecionada.setHoraFechamento(getTime());
-                listaMesas.repaint();
+                boolean flag = false;
+                for (Comanda comanda : selecionada.getComandas()) {
+                    if (comanda.isAberto()) {
+                        flag = true;
+                    }
+                }
+                if (!flag) {
+                    selecionada.setAberto(false);
+                    selecionada.setHoraFechamento(getTime());
+                    listaMesas.repaint();
 
-                JanelaFechamento janelaFechamento = new JanelaFechamento(selecionada, cardapio);
-                janelaFechamento.setSize(500, 500);
-                janelaFechamento.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-                janelaFechamento.setLocationRelativeTo(null);
-                janelaFechamento.setVisible(true);
+                    JanelaFechamento janelaFechamento = new JanelaFechamento(selecionada, cardapio);
+                    janelaFechamento.setSize(500, 500);
+                    janelaFechamento.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+                    janelaFechamento.setLocationRelativeTo(null);
+                    janelaFechamento.setVisible(true);
 
+                }
             }
         }
         );
