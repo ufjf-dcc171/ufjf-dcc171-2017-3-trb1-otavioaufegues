@@ -9,6 +9,27 @@
 
 3. Modelo de dados utilizado;
 
+	Classe Mesa 
+    	int numero;
+    	boolean aberto;
+    	String horaAbertura;
+    	String horaFechamento;
+    	ArrayList<Comanda>;
+
+	Classe Comanda
+    	int mesa;
+    	String codigo;
+    	boolean aberto;
+    	ArrayList<ItemComanda>;
+
+ 	Classe ItemComanda 
+    	private int codigoItem;
+    	private int quantidade;
+
+ 	Classe ItemCardapio
+    	private int codigo;
+    	private String nome;
+    	private double valorUnitario;
 
 
 4. Construção das telas;
@@ -40,3 +61,8 @@
 	- Adaptação as particularidades da linguagem na qual não estou habituado a programar;
 	- Entendimento do funcionamento de certos elementos utilizados como o ComboBox;
 	- Dificuldade grande em Montar um bom Layout.
+
+7. Pontos onde podem ser realizadas melhorias futuras.
+
+Melhorar Proteção contra erros de usuário, desabilitando botões por exemplo;
+Melhorar layout das Telas;
