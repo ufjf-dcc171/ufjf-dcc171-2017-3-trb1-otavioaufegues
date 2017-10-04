@@ -6,6 +6,7 @@
 package trb1;
 
 import java.util.ArrayList;
+import java.util.List;
 import javax.swing.table.AbstractTableModel;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableModel;
@@ -16,8 +17,8 @@ import javax.swing.table.TableModel;
  */
 public class ItemTableModel extends AbstractTableModel {
 
-    private ArrayList<ItemComanda> itensComanda;
-    private ArrayList<ItemCardapio> cardapio;
+    private List<ItemComanda> itensComanda;
+    private List<ItemCardapio> cardapio;
     private final Comanda comanda;
 
     public ItemTableModel(Comanda comanda, ArrayList<ItemCardapio> cardapio) {

@@ -10,13 +10,15 @@ package trb1;
  * @author Otávio
  */
 import java.util.ArrayList;
+import java.util.List;
 
 public class Comanda {
 
     private int mesa;
     private String codigo;
     private boolean aberto;
-    ArrayList<ItemComanda> itensComanda;
+    List<ItemComanda> itensComanda;
+    
 
     public boolean isAberto() {
         return aberto;
@@ -30,7 +32,7 @@ public class Comanda {
         return codigo;
     }
 
-    public ArrayList<ItemComanda> getItensComanda() {
+    public List<ItemComanda> getItensComanda() {
         return itensComanda;
     }
 
